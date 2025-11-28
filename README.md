@@ -1,6 +1,6 @@
 # Vachana TTS
 
-VachanaTTS คือโมเดล **Text-to-Speech (TTS)** สำหรับภาษาไทย  
+VachanaTTS โมเดล **Text-to-Speech (TTS)** สำหรับภาษาไทย  
 สร้างเสียงพูดจากข้อความอย่างรวดเร็ว รองรับการใช้งานทั้ง **CPU** และ **GPU** ผ่าน `onnxruntime`  
 
 - 🔥 สถาปัตยกรรม: [VITS](https://github.com/jaywalnut310/vits)  
@@ -30,4 +30,5 @@ TTS(text,
     volume=1.0,
     speed=1.0
 )
+
 ```
