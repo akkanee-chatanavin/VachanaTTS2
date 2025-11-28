@@ -11090,10 +11090,12 @@ ruble,รูเบิล
 riel,เรียล
 shekel,ชีเกล
 taka,ตาก้า
-yen,เยนfolderpackage,โฟลด์อีอาร์พีเอซีเคเอจีอี
+yen,เยน
+folderpackage,โฟลด์อีอาร์พีเอซีเคเอจีอี
 kokoro,โคโคอาร์โอ
 openweight,โอเพ่นวีไอจีเอชที
 tts,ทีทีเอส
 costefficient,คอสต์อีเอฟฟายซีไอเอ็นท์
 apachelicensed,เอพีเอซีฮีไลซ์เอ็นเอสเอ็ด
 deployed,เดอพีแอลโอเยดี
+vachana,วาจานะ

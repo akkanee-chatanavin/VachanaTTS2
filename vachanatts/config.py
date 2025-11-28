@@ -1,7 +1,6 @@
 """Piper configuration"""
 
 from dataclasses import dataclass, field
-from enum import Enum
 from typing import Any, Final, Mapping, Optional, Sequence
 
 DEFAULT_NOISE_SCALE: Final = 0.667
@@ -9,12 +8,6 @@ DEFAULT_LENGTH_SCALE: Final = 1.0
 DEFAULT_NOISE_W_SCALE: Final = 0.8
 
 DEFAULT_HOP_LENGTH: Final = 256
-
-
-class PhonemeType(str, Enum):
-    ESPEAK = "espeak"
-    TEXT = "text"
-
 
 @dataclass
 class Config:
@@ -29,14 +22,8 @@ class Config:
     sample_rate: int
     """Sample rate of output audio."""
 
-    espeak_voice: str
-    """Name of espeak-ng voice or alphabet."""
-
     phoneme_id_map: Mapping[str, Sequence[int]]
     """Phoneme -> [id,]."""
-
-    phoneme_type: PhonemeType
-    """espeak or text."""
 
     speaker_id_map: Mapping[str, int] = field(default_factory=dict)
     """Speaker -> id"""
@@ -63,9 +50,7 @@ class Config:
             length_scale=inference.get("length_scale", DEFAULT_LENGTH_SCALE),
             noise_w_scale=inference.get("noise_w", DEFAULT_NOISE_W_SCALE),
             #
-            espeak_voice=config["espeak"]["voice"],
             phoneme_id_map=config["phoneme_id_map"],
-            phoneme_type=PhonemeType(config.get("phoneme_type", PhonemeType.ESPEAK)),
             speaker_id_map=config.get("speaker_id_map", {}),
             #
             piper_version=config.get("piper_version"),
@@ -79,10 +64,6 @@ class Config:
             "audio": {
                 "sample_rate": self.sample_rate,
             },
-            "espeak": {
-                "voice": self.espeak_voice,
-            },
-            "phoneme_type": self.phoneme_type.value,
             "num_symbols": self.num_symbols,
             "num_speakers": self.num_speakers,
             "inference": {

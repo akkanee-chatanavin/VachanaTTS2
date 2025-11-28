@@ -217,20 +217,4 @@ def clean_text(text):
     text = transliterator(text)
     return text
 
-if __name__ == "__main__":
-    # Example
-    test_cases = [
-        "วันที่ ฉันสนุกมากๆ 123456",
-        "ดีมากๆ",
-        "บ้านสวยๆ",
-        "เขียนเร็วๆ",
-        "วันที่ ฉันสนุกมากๆ และกินอร่อยๆ",
-        "123456789",
-        "HELLO THIS IS example.",
-        "ตรวจสอบในเว็บไซต์ของผู้ผลิตจอภาพว่ามีเฟิร์มแวร์ล่าสุดให้ดาวน์โหลดหรือไม่"
-    ]
-    
-    for text in test_cases:
-        result = clean_text(text)
-        print(f"Original: {text} -> Converted: {result}")
 
