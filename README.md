@@ -1,5 +1,9 @@
 # VachanaTTS2 🔊
 
+![CUDA](https://img.shields.io/badge/CUDA-13-green?logo=nvidia)
+![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)
+![ONNX](https://img.shields.io/badge/ONNX-Runtime_GPU-orange)
+
 > VachanaTTS โมเดล Text-to-Speech (TTS) สำหรับภาษาไทย สร้างเสียงพูดจากข้อความอย่างรวดเร็ว  
 > Fork จาก [VYNCX/VachanaTTS2](https://github.com/VYNCX/VachanaTTS2)
 
@@ -15,7 +19,10 @@
 
 ## 🖥️ System Requirements
 - Python 3.8+
-- NVIDIA GPU ที่รองรับ CUDA 13 (สำหรับ GPU mode)
+- Windows 10/11
+- NVIDIA GPU ที่รองรับ CUDA 13
+  - Driver version 570+ ขึ้นไป
+  - RTX 50 series หรือ GPU รุ่นใหม่ที่รองรับ CUDA 13
 
 ---
 
