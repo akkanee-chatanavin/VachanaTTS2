@@ -261,7 +261,7 @@ def TransformSyl(form,phone):
     elif re.search(r'ee[nmN][12]',phone):
         phone = re.sub(r'ee','e',phone)
     elif re.search(r'\@\@[nmN][12]',phone):
-        phone = re.sub(r'\@\@','\@',phone)
+        phone = re.sub(r'\@\@','\\@',phone)
     if re.search(r'^อย่า$|^อยู่$|^อย่าง$|^อยาก$',form) and "'" in phone:
         x = phone.split("'")
         phone = x[-1]
@@ -542,7 +542,7 @@ def read_sylpattern(Filename):
         tmp[0] = re.sub(r'Z',u"([กงดนมบรลฎฏจตณถพศทสชคภปญ])",tmp[0])
         tmp[0] = re.sub(r'D',u"([กงดนมบวยต])",tmp[0])
         tmp[0] = re.sub(r'W',u"[ก-ฮ]",tmp[0])
-        tmp[0] = re.sub(r'\.',u"[\.]",tmp[0])
+        tmp[0] = re.sub(r'\.',u"[\\.]",tmp[0])
 
         if tmp[2] == "T":
             tmp[0] = re.sub(r"T",u"[่้๊๋]",tmp[0])

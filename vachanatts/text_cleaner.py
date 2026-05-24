@@ -41,7 +41,7 @@ def eng_to_thai(text):
     return "".join(result)
 
 def remove_symbol(text):
-    symbols = "{}[]()-_?/\\|!*%$&@#^<>+-\";:~\`=“”ฯ"
+    symbols = "{}[]()-_?/\\|!*%$&@#^<>+-\";:~`=“”ฯ"
     for symbol in symbols:
         text = text.replace(symbol, '')
     text = text.replace(" ๆ","ๆ")
