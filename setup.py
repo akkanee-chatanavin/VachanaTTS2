@@ -6,6 +6,9 @@ setup(
     description="VachanaTTS โมเดล Text-to-Speech สำหรับภาษาไทย",
     url="https://github.com/akkanee-chatanavin/VachanaTTS2",
     packages=find_packages(),
+    package_data={
+        "vachanatts": ["data/*"],
+    },
     install_requires=[
         "pythainlp",
         "ssg",
